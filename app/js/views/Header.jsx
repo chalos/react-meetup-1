@@ -1,11 +1,9 @@
 /**
  *
  */
+
 var actions = require('../actions/AppActionCreator');
 
-/**
- * 
- */
 var Header = React.createClass({
 
   /**
@@ -20,26 +18,15 @@ var Header = React.createClass({
         
         <p className="logo">Todo for Dummies</p>
         
-        <input className="search-box right" 
-               type="text" 
-               placeholder="search here" 
-               onChange={this.handleChange} />
+        <input className="search-box right" type="text" defaultValue="search here" />
 
       </header>
     );
   
   },
 
-  /**
-   * 
-   */
-  handleChange: function(evt){
-      var val = evt.target.value.trim();
-      actions.doSearch(val);
-  },
-
-  //
   noop: function(){
+
   }
 
 });
